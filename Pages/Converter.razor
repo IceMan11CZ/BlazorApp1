@@ -1,0 +1,23 @@
+﻿@page "/converter"
+
+<PageTitle>Converter</PageTitle>
+
+<h1>Převodník</h1>
+
+<label>Palce</label>
+<input type="number" @bind="palce" />
+<span> = </span>
+<input type="number" @bind="centimetry" />
+<label>Centimetry</label>
+
+@code {
+    double palce = 1;
+    double centimetry = 2.54;
+
+    void UpdateValue(ChangeEventArgs e)
+{
+    double val = 0;
+    double.TryParse(e.Value.ToString(), out val);
+    palce = val;
+}
+}

@@ -1,0 +1,11 @@
+﻿@page "/"
+
+<TodoList Todos="@todos"/>
+@code{
+    IList<Todo> todos = new List<Todo>()
+    {
+        new Todo() {Text = "Naučit se Blazor framework"},
+        new Todo() {Text = "Vytvořit vlastní ToDo aplikaci"},
+        new Todo() {Text = "Pochopit práci s parametry komponenty", Done = true}
+    };
+}
